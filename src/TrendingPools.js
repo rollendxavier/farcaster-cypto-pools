@@ -6,7 +6,7 @@ const TrendingPools = () => {
   const [pools, setPools] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const apiKey = process.env.REACT_APP_API_KEY; // Your CoinGecko API key from environment variable
+  const apiKey = process.env.REACT_APP_COINGECKO_API_PRO_KEY; // Your CoinGecko API key from environment variable
 
   useEffect(() => {
     const getPools = async () => {
