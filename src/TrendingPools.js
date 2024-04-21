@@ -6,7 +6,7 @@ const TrendingPools = () => {
   const [pools, setPools] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const apiKey = 'CG-k63f6X3RG6T7MGVf6BdfHWh1'; // Your CoinGecko API key
+  const apiKey = 'CG-'; // Your CoinGecko API key
 
   useEffect(() => {
     const getPools = async () => {
@@ -43,12 +43,10 @@ const TrendingPools = () => {
     <div>
       <Helmet>
         <title>Trending Crypto Pools</title>
-        <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:image" content="https://9fd0-106-68-21-109.ngrok-free.app/app.jpg" />
-        <meta property="fc:frame:button:1" content="Green" />
-        <meta property="fc:frame:button:2" content="Purple" />
-        <meta property="fc:frame:button:3" content="Red" />
-        <meta property="fc:frame:button:4" content="Blue" />
+        <meta property="og:title" content="Trending Crypto Pools" />
+        <meta property="og:description" content="View the top trending crypto pools." />
+        <meta property="og:image" content="https://9fd0-106-68-21-109.ngrok-free.app/your-image.jpg" />
+        <meta property="og:url" content="https://9fd0-106-68-21-109.ngrok-free.app" />
       </Helmet>
 
       <h1>Trending Crypto Pools</h1>
