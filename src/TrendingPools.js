@@ -12,7 +12,7 @@ const TrendingPools = () => {
     const getPools = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('https://pro-api.coingecko.com/api/v3/onchain/search/pools', {
+        const response = await axios.get('/api/pools', {
           headers: { 'x-cg-pro-api-key': apiKey },
           params: { query: 'weth', network: 'eth', include: 'dex', page: 1 }
         });
@@ -40,14 +40,13 @@ const TrendingPools = () => {
   console.log('Pools:', pools);
 
   return (
-    <div>
+    <>
       <Helmet>
-        <title>Trending Crypto Pools</title>
-        <title>Trending Crypto Pools</title>
-        <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:image" content="http://raw.githubusercontent.com/rollendxavier/farcaster-cypto-pools/main/app.jpg" /> {/* Replace with your image URL */}
-        <meta property="fc:frame:button:1" content="Button 1" />
-        <meta property="fc:frame:button:2" content="Button 2" />
+        <meta property="og:image" content="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"/>
+        <meta property="og:title" content="Your Title"/>
+        <meta property="og:description" content="A full description of the page."/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
       </Helmet>
       <h1>Trending Crypto Pools</h1>
       {pools.map((pool, index) => (
@@ -65,7 +64,7 @@ const TrendingPools = () => {
           <p>Price Change Percentage in the last 24 hours: {pool.attributes.price_change_percentage.h24}%</p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
