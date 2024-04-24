@@ -42,11 +42,21 @@ const TrendingPools = () => {
   return (
     <>
       <Helmet>
-        <meta property="og:image" content="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"/>
-        <meta property="og:title" content="Your Title"/>
-        <meta property="og:description" content="A full description of the page."/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="630"/>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Web site created using create-react-app" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>React App</title>
+        {/* OpenGraph Meta Tags */}
+        <meta property="og:title" content="Trending Crypto Pools" />
+        <meta property="og:description" content="Check out the latest trends in crypto pools." />
+        <meta property="og:image" content="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        {/* Additional tags as needed */}
       </Helmet>
       <h1>Trending Crypto Pools</h1>
       {pools.map((pool, index) => (
